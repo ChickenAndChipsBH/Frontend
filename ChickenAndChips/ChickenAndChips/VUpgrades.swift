@@ -14,24 +14,39 @@ struct VUpgrades: View {
                 Button {
                     
                 } label: {
-                    Text(verbatim: "Buildings")
+                    Text(verbatim: "Building")
                 }
+                .padding(.bottom, 10)
                 Button {
                     
                 } label: {
                     Text(verbatim: "Products")
                 }
+                .padding(.bottom, 10)
                 Button {
                     
                 } label: {
-                    Text(verbatim: "Buildings")
+                    Text(verbatim: "Staff")
                 }
+                .padding(.bottom, 10)
+                Button {
+                    
+                } label: {
+                    Text(verbatim: "Fun")
+                }
+                .padding(.bottom, 10)
+                Spacer()
             }
+            .buttonStyle(SJuicyButtonStyle())
+            .frame(maxWidth: 100)
+            .background(Image("brick").resizable(resizingMode: .tile))
             LazyVStack {
                 CUpgradeable(title: "Move Pub", description: "Resets all upgrades\nIncreases revenue + £100/sec", price: 200000)
                 CUpgradeable(title: "Hire Quiz Master", description: "Generate idle income + £3/sec", price: 300)
                 CUpgradeable(title: "Buy pool table", description: "Reduce rating decay -10%", price: 80)
+                Spacer()
             }
+            .frame(maxWidth: .infinity)
         }
     }
 }

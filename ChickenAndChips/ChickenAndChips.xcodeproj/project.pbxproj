@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7DA1148B2BCAEF2000B1ECFE /* SSolidButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA1148A2BCAEF2000B1ECFE /* SSolidButtonStyle.swift */; };
 		7DA8A3AC2BCAB74C00B404FD /* ChickenAndChipsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A3AB2BCAB74C00B404FD /* ChickenAndChipsApp.swift */; };
 		7DA8A3AE2BCAB74C00B404FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A3AD2BCAB74C00B404FD /* ContentView.swift */; };
 		7DA8A3B02BCAB74E00B404FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DA8A3AF2BCAB74E00B404FD /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7DA1148A2BCAEF2000B1ECFE /* SSolidButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSolidButtonStyle.swift; sourceTree = "<group>"; };
 		7DA8A3A82BCAB74C00B404FD /* ChickenAndChips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChickenAndChips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA8A3AB2BCAB74C00B404FD /* ChickenAndChipsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickenAndChipsApp.swift; sourceTree = "<group>"; };
 		7DA8A3AD2BCAB74C00B404FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				7DA8A3E52BCACE7E00B404FD /* CBUpgrade.swift */,
 				7DA8A3E32BCACB3B00B404FD /* VUpgrades.swift */,
 				7DA8A3E72BCAD3C100B404FD /* SJuicyButtonStyle.swift */,
+				7DA1148A2BCAEF2000B1ECFE /* SSolidButtonStyle.swift */,
 				7DA8A3D72BCABD2700B404FD /* VMain.swift */,
 				7DA8A3AF2BCAB74E00B404FD /* Assets.xcassets */,
 				7DA8A3B12BCAB74E00B404FD /* Preview Content */,
@@ -292,6 +295,7 @@
 				7DA8A3E22BCAC9D800B404FD /* HCurrency.swift in Sources */,
 				7DA8A3E42BCACB3B00B404FD /* VUpgrades.swift in Sources */,
 				7DA8A3E62BCACE7E00B404FD /* CBUpgrade.swift in Sources */,
+				7DA1148B2BCAEF2000B1ECFE /* SSolidButtonStyle.swift in Sources */,
 				7DA8A3DC2BCAC29400B404FD /* CBalance.swift in Sources */,
 				7DA8A3AC2BCAB74C00B404FD /* ChickenAndChipsApp.swift in Sources */,
 				7DA8A3E02BCAC8A800B404FD /* CUpgradeable.swift in Sources */,

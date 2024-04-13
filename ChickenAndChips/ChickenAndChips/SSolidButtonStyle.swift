@@ -1,5 +1,5 @@
 //
-//  SJuicyButtonStyle.swift
+//  SSolidButtonStyle.swift
 //  ChickenAndChips
 //
 //  Created by Charlotte Chrysostom on 13/04/2024.
@@ -7,18 +7,19 @@
 
 import SwiftUI
 
-struct SJuicyButtonStyle: ButtonStyle {
+struct SSolidButtonStyle: ButtonStyle {
+    
+    let color: Color
+    
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .frame(maxWidth: .infinity)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
             .font(.headline)
             .shadow(color: .black, radius: 1)
-            //.padding()
-            .background(Image("wood box").resizable().aspectRatio(contentMode: .fill))
-            //.background(Color.red)
+            .padding()
+            .background(color)
             .foregroundStyle(.white)
             //.padding()
-            .clipShape(Capsule())
+            //.clipShape(Capsule())
     }
 }
-

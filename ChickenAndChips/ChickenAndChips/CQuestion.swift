@@ -22,8 +22,15 @@ struct CQuestion: View {
             .padding()
             .cornerRadius(12)
             .border(.black)
-            VStack {
+            HStack {
                 TextField("Enter answer...", text: $qAnswer)
+                    
+                Button {
+                    
+                } label: {
+                    Text(verbatim: "Answer")
+                }
+                .buttonStyle(SJuicyButtonStyle())
             }
             .padding()
             .cornerRadius(12)

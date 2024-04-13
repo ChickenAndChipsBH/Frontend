@@ -19,10 +19,11 @@ struct CUpgradeable: View {
                     .font(.headline)
             }
             Spacer()
-            Text(verbatim: "£\(HCurrency.format(price, decimals: 0))")
-                .font(.title)
-                .padding()
-                .border(.black)
+            Button {
+                
+            } label: {
+                Text(verbatim: "£\(HCurrency.format(price, decimals: 0))")
+            }.buttonStyle(SSolidButtonStyle(color: .green))
             
         }
         .frame(maxWidth: .infinity)
