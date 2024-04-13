@@ -14,6 +14,7 @@ struct CUserHUD: View {
             HStack {
                 CBalance(title:"Balance", value: 0)
                 CBalance(title:"Revenue", value: 0)
+                CBUpgrade()
             }
         }
     }

@@ -9,14 +9,16 @@ import SwiftUI
 
 struct VMain: View {
     var body: some View {
-        ZStack {
-            Color.red
-            VStack {
-                CUserHUD()
-                    .padding()
-                Spacer()
-                CQuestion()
-                    .padding()
+        NavigationStack {
+            ZStack {
+                Color.red
+                VStack {
+                    CUserHUD()
+                        .padding()
+                    Spacer()
+                    CQuestion()
+                        .padding()
+                }
             }
         }
     }

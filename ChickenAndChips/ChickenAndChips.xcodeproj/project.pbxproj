@@ -22,6 +22,8 @@
 		7DA8A3E02BCAC8A800B404FD /* CUpgradeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A3DF2BCAC8A800B404FD /* CUpgradeable.swift */; };
 		7DA8A3E22BCAC9D800B404FD /* HCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A3E12BCAC9D800B404FD /* HCurrency.swift */; };
 		7DA8A3E42BCACB3B00B404FD /* VUpgrades.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A3E32BCACB3B00B404FD /* VUpgrades.swift */; };
+		7DA8A3E62BCACE7E00B404FD /* CBUpgrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A3E52BCACE7E00B404FD /* CBUpgrade.swift */; };
+		7DA8A3E82BCAD3C100B404FD /* SJuicyButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A3E72BCAD3C100B404FD /* SJuicyButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		7DA8A3DF2BCAC8A800B404FD /* CUpgradeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CUpgradeable.swift; sourceTree = "<group>"; };
 		7DA8A3E12BCAC9D800B404FD /* HCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCurrency.swift; sourceTree = "<group>"; };
 		7DA8A3E32BCACB3B00B404FD /* VUpgrades.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VUpgrades.swift; sourceTree = "<group>"; };
+		7DA8A3E52BCACE7E00B404FD /* CBUpgrade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBUpgrade.swift; sourceTree = "<group>"; };
+		7DA8A3E72BCAD3C100B404FD /* SJuicyButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJuicyButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +122,9 @@
 				7DA8A3D92BCABE7300B404FD /* CRating.swift */,
 				7DA8A3DB2BCAC29400B404FD /* CBalance.swift */,
 				7DA8A3DF2BCAC8A800B404FD /* CUpgradeable.swift */,
+				7DA8A3E52BCACE7E00B404FD /* CBUpgrade.swift */,
 				7DA8A3E32BCACB3B00B404FD /* VUpgrades.swift */,
+				7DA8A3E72BCAD3C100B404FD /* SJuicyButtonStyle.swift */,
 				7DA8A3D72BCABD2700B404FD /* VMain.swift */,
 				7DA8A3AF2BCAB74E00B404FD /* Assets.xcassets */,
 				7DA8A3B12BCAB74E00B404FD /* Preview Content */,
@@ -285,11 +291,13 @@
 				7DA8A3D82BCABD2700B404FD /* VMain.swift in Sources */,
 				7DA8A3E22BCAC9D800B404FD /* HCurrency.swift in Sources */,
 				7DA8A3E42BCACB3B00B404FD /* VUpgrades.swift in Sources */,
+				7DA8A3E62BCACE7E00B404FD /* CBUpgrade.swift in Sources */,
 				7DA8A3DC2BCAC29400B404FD /* CBalance.swift in Sources */,
 				7DA8A3AC2BCAB74C00B404FD /* ChickenAndChipsApp.swift in Sources */,
 				7DA8A3E02BCAC8A800B404FD /* CUpgradeable.swift in Sources */,
 				7DA8A3DE2BCAC7FB00B404FD /* CUserHUD.swift in Sources */,
 				7DA8A3D62BCABB3100B404FD /* CQuestion.swift in Sources */,
+				7DA8A3E82BCAD3C100B404FD /* SJuicyButtonStyle.swift in Sources */,
 				7DA8A3DA2BCABE7300B404FD /* CRating.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

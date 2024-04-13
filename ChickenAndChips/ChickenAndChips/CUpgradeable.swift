@@ -18,7 +18,8 @@ struct CUpgradeable: View {
                 Text(verbatim: description)
                     .font(.headline)
             }
-            Text(verbatim: "£\(HCurrency.format(price))")
+            Spacer()
+            Text(verbatim: "£\(HCurrency.format(price, decimals: 0))")
                 .font(.title)
                 .padding()
                 .border(.black)
