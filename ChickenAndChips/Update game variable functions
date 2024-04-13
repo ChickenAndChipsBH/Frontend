@@ -1,0 +1,84 @@
+int pub_level;     // garden shed -> village pub -> ... -> Space Station Bar
+float money;       // current money balance
+float rating;      // rating bounded 0 - 5
+int income;        // number of products being sold, starting at 1, buy upgrades to sell more products
+float idleIncome;  // base amount of revenue generated per second, upgrade to increase the base amount
+float revenue;     // calculate the amount of income per second
+float ratingDecay; // rate that the pub rating goes down per second (eg. lose 0.02 stars per second), buy upgrades to reduce the decay
+
+Constructor Pub(int level, float startingMoney) {
+    // start game with pub_level = 1, and startingMoney = 0;
+    // higher pub level starts with higher income amounts
+    pub_level = level;
+    money = startingMoney;
+    rating = 1.5;
+    // starting income based on pub level
+    case pub_level = 1:
+        income = 1;
+    case pub_level = 2:
+        income = 5;
+    ...
+    ratingDecay = 0.05
+}
+
+Increase_Rating(float amount) {
+    // when answering question correct / special event
+    rating += amount;
+    if (rating > 5) {
+        rating = 5;
+    }
+}
+
+Decrease_Rating(float amount) {
+    // when answering question incorrect / special event
+    rating -= amount;
+    if (rating < 0) {
+        rating = 0;
+    }
+}
+
+Increase_Money(float amount) {
+    // when answering question correct / special event
+    money += amount;
+}
+
+bool Decrease_Money(float amount) {
+    // when buying upgrades
+    // return true if enough funds available, false otherwise
+    if (money >= amount) {
+        money -= amount;
+        return true;
+    }
+    return false;
+}
+
+Update_Money() {
+    // update every second with current revenue, need to call update revenue before calling update money
+    money += revenue;
+}
+
+Update_Rating(int time) {
+    // time = time (seconds) since last question was answered
+    if (time < 120) {
+        // rating does not decay until 2 mins after answering a question
+        Do Nothing;
+    }
+    rating -= ratingDecay;
+}
+
+Update_Revenue() {
+    revenue = idleIncome + (rating * income);
+}
+
+Upgrade_PubLevel() {
+    // reset everything
+    // create new pub with pubLevel + 1
+}
+
+Upgrade_Income(int upgrade) {
+    income += upgrade;
+}
+
+Upgrade_RatingDecay(float upgrade) {
+    ratingDecay -= upgrade;
+}
