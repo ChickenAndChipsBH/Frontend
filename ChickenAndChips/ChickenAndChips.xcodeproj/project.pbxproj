@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7DA1148B2BCAEF2000B1ECFE /* SSolidButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA1148A2BCAEF2000B1ECFE /* SSolidButtonStyle.swift */; };
+		7DA1148D2BCB06B700B1ECFE /* NRequestQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA1148C2BCB06B700B1ECFE /* NRequestQuestion.swift */; };
+		7DA1148F2BCB075400B1ECFE /* NRequestDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA1148E2BCB075400B1ECFE /* NRequestDelegate.swift */; };
+		7DA114912BCB0D8800B1ECFE /* HSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA114902BCB0D8800B1ECFE /* HSingleton.swift */; };
 		7DA8A3AC2BCAB74C00B404FD /* ChickenAndChipsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A3AB2BCAB74C00B404FD /* ChickenAndChipsApp.swift */; };
 		7DA8A3AE2BCAB74C00B404FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A3AD2BCAB74C00B404FD /* ContentView.swift */; };
 		7DA8A3B02BCAB74E00B404FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DA8A3AF2BCAB74E00B404FD /* Assets.xcassets */; };
@@ -46,6 +49,9 @@
 
 /* Begin PBXFileReference section */
 		7DA1148A2BCAEF2000B1ECFE /* SSolidButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSolidButtonStyle.swift; sourceTree = "<group>"; };
+		7DA1148C2BCB06B700B1ECFE /* NRequestQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NRequestQuestion.swift; sourceTree = "<group>"; };
+		7DA1148E2BCB075400B1ECFE /* NRequestDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NRequestDelegate.swift; sourceTree = "<group>"; };
+		7DA114902BCB0D8800B1ECFE /* HSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSingleton.swift; sourceTree = "<group>"; };
 		7DA8A3A82BCAB74C00B404FD /* ChickenAndChips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChickenAndChips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA8A3AB2BCAB74C00B404FD /* ChickenAndChipsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickenAndChipsApp.swift; sourceTree = "<group>"; };
 		7DA8A3AD2BCAB74C00B404FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -118,6 +124,9 @@
 			children = (
 				7DA8A3AB2BCAB74C00B404FD /* ChickenAndChipsApp.swift */,
 				7DA8A3E12BCAC9D800B404FD /* HCurrency.swift */,
+				7DA114902BCB0D8800B1ECFE /* HSingleton.swift */,
+				7DA1148C2BCB06B700B1ECFE /* NRequestQuestion.swift */,
+				7DA1148E2BCB075400B1ECFE /* NRequestDelegate.swift */,
 				7DA8A3AD2BCAB74C00B404FD /* ContentView.swift */,
 				7DA8A3D52BCABB3100B404FD /* CQuestion.swift */,
 				7DA8A3DD2BCAC7FB00B404FD /* CUserHUD.swift */,
@@ -290,11 +299,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DA1148D2BCB06B700B1ECFE /* NRequestQuestion.swift in Sources */,
 				7DA8A3AE2BCAB74C00B404FD /* ContentView.swift in Sources */,
 				7DA8A3D82BCABD2700B404FD /* VMain.swift in Sources */,
 				7DA8A3E22BCAC9D800B404FD /* HCurrency.swift in Sources */,
 				7DA8A3E42BCACB3B00B404FD /* VUpgrades.swift in Sources */,
 				7DA8A3E62BCACE7E00B404FD /* CBUpgrade.swift in Sources */,
+				7DA114912BCB0D8800B1ECFE /* HSingleton.swift in Sources */,
+				7DA1148F2BCB075400B1ECFE /* NRequestDelegate.swift in Sources */,
 				7DA1148B2BCAEF2000B1ECFE /* SSolidButtonStyle.swift in Sources */,
 				7DA8A3DC2BCAC29400B404FD /* CBalance.swift in Sources */,
 				7DA8A3AC2BCAB74C00B404FD /* ChickenAndChipsApp.swift in Sources */,

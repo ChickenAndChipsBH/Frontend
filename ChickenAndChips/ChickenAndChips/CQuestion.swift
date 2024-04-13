@@ -11,12 +11,14 @@ struct CQuestion: View {
     
     @State var qAnswer = ""
     
+    @EnvironmentObject var singleton: HSingleton
+    
     var body: some View {
         VStack {
             VStack(alignment: .leading) {
-                Text("Question").font(.headline)
+                Text(verbatim: "Question").font(.headline)
                 
-                Text("What is Tom's favourite programming language?").font(.title2)
+                Text(verbatim: singleton.question).font(.title2)
             }
             .frame(maxWidth: .infinity)
             .padding()
@@ -26,6 +28,9 @@ struct CQuestion: View {
                 TextField("Enter answer...", text: $qAnswer)
                     
                 Button {
+                    //print("Making a request")
+                    //let req = NRequestQuestion()
+                    //req.makeQuestionRequest()
                     
                 } label: {
                     Text(verbatim: "Answer")
@@ -35,6 +40,9 @@ struct CQuestion: View {
             .padding()
             .cornerRadius(12)
             .border(.black)
+        }
+        .onAppear {
+            singleton.makeNewQuestionRequest()
         }
     }
 }
