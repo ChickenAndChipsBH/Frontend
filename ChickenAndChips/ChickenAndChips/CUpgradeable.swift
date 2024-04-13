@@ -8,11 +8,29 @@
 import SwiftUI
 
 struct CUpgradeable: View {
+    let title: String
+    let description: String
+    let price: Float
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack() {
+            VStack(alignment: .leading) {
+                Text(verbatim: title).font(.title)
+                Text(verbatim: description)
+                    .font(.headline)
+            }
+            Text(verbatim: "£\(HCurrency.format(price))")
+                .font(.title)
+                .padding()
+                .border(.black)
+            
+        }
+        .frame(maxWidth: .infinity)
+        .padding()
+        .cornerRadius(12)
+        .border(.black)
     }
 }
 
 #Preview {
-    CUpgradeable()
+    CUpgradeable(title: "Hire Quiz Master", description: "Generate idle income + £3/sec", price: 300)
 }

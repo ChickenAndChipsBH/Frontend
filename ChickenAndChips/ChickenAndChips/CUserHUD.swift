@@ -9,7 +9,13 @@ import SwiftUI
 
 struct CUserHUD: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            CRating(rating: 3.5)
+            HStack {
+                CBalance(title:"Balance", value: 0)
+                CBalance(title:"Revenue", value: 0)
+            }
+        }
     }
 }
 

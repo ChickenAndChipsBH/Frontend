@@ -14,6 +14,14 @@
 		7DA8A3BD2BCAB74E00B404FD /* ChickenAndChipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A3BC2BCAB74E00B404FD /* ChickenAndChipsTests.swift */; };
 		7DA8A3C72BCAB74E00B404FD /* ChickenAndChipsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A3C62BCAB74E00B404FD /* ChickenAndChipsUITests.swift */; };
 		7DA8A3C92BCAB74E00B404FD /* ChickenAndChipsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A3C82BCAB74E00B404FD /* ChickenAndChipsUITestsLaunchTests.swift */; };
+		7DA8A3D62BCABB3100B404FD /* CQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A3D52BCABB3100B404FD /* CQuestion.swift */; };
+		7DA8A3D82BCABD2700B404FD /* VMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A3D72BCABD2700B404FD /* VMain.swift */; };
+		7DA8A3DA2BCABE7300B404FD /* CRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A3D92BCABE7300B404FD /* CRating.swift */; };
+		7DA8A3DC2BCAC29400B404FD /* CBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A3DB2BCAC29400B404FD /* CBalance.swift */; };
+		7DA8A3DE2BCAC7FB00B404FD /* CUserHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A3DD2BCAC7FB00B404FD /* CUserHUD.swift */; };
+		7DA8A3E02BCAC8A800B404FD /* CUpgradeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A3DF2BCAC8A800B404FD /* CUpgradeable.swift */; };
+		7DA8A3E22BCAC9D800B404FD /* HCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A3E12BCAC9D800B404FD /* HCurrency.swift */; };
+		7DA8A3E42BCACB3B00B404FD /* VUpgrades.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A3E32BCACB3B00B404FD /* VUpgrades.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +52,14 @@
 		7DA8A3C22BCAB74E00B404FD /* ChickenAndChipsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChickenAndChipsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA8A3C62BCAB74E00B404FD /* ChickenAndChipsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickenAndChipsUITests.swift; sourceTree = "<group>"; };
 		7DA8A3C82BCAB74E00B404FD /* ChickenAndChipsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickenAndChipsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7DA8A3D52BCABB3100B404FD /* CQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CQuestion.swift; sourceTree = "<group>"; };
+		7DA8A3D72BCABD2700B404FD /* VMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMain.swift; sourceTree = "<group>"; };
+		7DA8A3D92BCABE7300B404FD /* CRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRating.swift; sourceTree = "<group>"; };
+		7DA8A3DB2BCAC29400B404FD /* CBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBalance.swift; sourceTree = "<group>"; };
+		7DA8A3DD2BCAC7FB00B404FD /* CUserHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CUserHUD.swift; sourceTree = "<group>"; };
+		7DA8A3DF2BCAC8A800B404FD /* CUpgradeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CUpgradeable.swift; sourceTree = "<group>"; };
+		7DA8A3E12BCAC9D800B404FD /* HCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCurrency.swift; sourceTree = "<group>"; };
+		7DA8A3E32BCACB3B00B404FD /* VUpgrades.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VUpgrades.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +111,15 @@
 			isa = PBXGroup;
 			children = (
 				7DA8A3AB2BCAB74C00B404FD /* ChickenAndChipsApp.swift */,
+				7DA8A3E12BCAC9D800B404FD /* HCurrency.swift */,
 				7DA8A3AD2BCAB74C00B404FD /* ContentView.swift */,
+				7DA8A3D52BCABB3100B404FD /* CQuestion.swift */,
+				7DA8A3DD2BCAC7FB00B404FD /* CUserHUD.swift */,
+				7DA8A3D92BCABE7300B404FD /* CRating.swift */,
+				7DA8A3DB2BCAC29400B404FD /* CBalance.swift */,
+				7DA8A3DF2BCAC8A800B404FD /* CUpgradeable.swift */,
+				7DA8A3E32BCACB3B00B404FD /* VUpgrades.swift */,
+				7DA8A3D72BCABD2700B404FD /* VMain.swift */,
 				7DA8A3AF2BCAB74E00B404FD /* Assets.xcassets */,
 				7DA8A3B12BCAB74E00B404FD /* Preview Content */,
 			);
@@ -258,7 +282,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DA8A3AE2BCAB74C00B404FD /* ContentView.swift in Sources */,
+				7DA8A3D82BCABD2700B404FD /* VMain.swift in Sources */,
+				7DA8A3E22BCAC9D800B404FD /* HCurrency.swift in Sources */,
+				7DA8A3E42BCACB3B00B404FD /* VUpgrades.swift in Sources */,
+				7DA8A3DC2BCAC29400B404FD /* CBalance.swift in Sources */,
 				7DA8A3AC2BCAB74C00B404FD /* ChickenAndChipsApp.swift in Sources */,
+				7DA8A3E02BCAC8A800B404FD /* CUpgradeable.swift in Sources */,
+				7DA8A3DE2BCAC7FB00B404FD /* CUserHUD.swift in Sources */,
+				7DA8A3D62BCABB3100B404FD /* CQuestion.swift in Sources */,
+				7DA8A3DA2BCABE7300B404FD /* CRating.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

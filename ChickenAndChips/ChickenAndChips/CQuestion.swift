@@ -8,8 +8,27 @@
 import SwiftUI
 
 struct CQuestion: View {
+    
+    @State var qAnswer = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            VStack(alignment: .leading) {
+                Text("Question").font(.headline)
+                
+                Text("What is Tom's favourite programming language?").font(.title2)
+            }
+            .frame(maxWidth: .infinity)
+            .padding()
+            .cornerRadius(12)
+            .border(.black)
+            VStack {
+                TextField("Enter answer...", text: $qAnswer)
+            }
+            .padding()
+            .cornerRadius(12)
+            .border(.black)
+        }
     }
 }
 

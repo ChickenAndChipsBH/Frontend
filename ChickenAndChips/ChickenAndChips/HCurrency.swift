@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+class HCurrency {
+    static func format(_ value: Float) -> String {
+        return String(format: "%.2f", value)
+    }
+}

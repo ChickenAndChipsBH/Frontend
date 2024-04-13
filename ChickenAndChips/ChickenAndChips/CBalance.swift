@@ -8,11 +8,20 @@
 import SwiftUI
 
 struct CBalance: View {
+    let title: String
+    @State var value: Float
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading) {
+            Text(verbatim: title).font(.headline)
+            Text(verbatim: "£\(String(format: "%.2f", value))")
+        }
+        .frame(maxWidth: .infinity)
+        .padding()
+        .cornerRadius(12)
+        .border(.black)
     }
 }
 
 #Preview {
-    CBalance()
+    CBalance(title: "Balance", value: 0)
 }
