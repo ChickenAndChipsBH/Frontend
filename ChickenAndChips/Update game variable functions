@@ -6,6 +6,21 @@ float idleIncome;  // base amount of revenue generated per second, upgrade to in
 float revenue;     // calculate the amount of income per second
 float ratingDecay; // rate that the pub rating goes down per second (eg. lose 0.02 stars per second), buy upgrades to reduce the decay
 
+Constructor Pub(int level, float startingMoney) {
+    // start game with pub_level = 1, and startingMoney = 0;
+    // higher pub level starts with higher income amounts
+    pub_level = level;
+    money = startingMoney;
+    rating = 1.5;
+    // starting income based on pub level
+    case pub_level = 1:
+        income = 1;
+    case pub_level = 2:
+        income = 5;
+    ...
+    ratingDecay = 0.05
+}
+
 Increase_Rating(float amount) {
     // when answering question correct / special event
     rating += amount;
