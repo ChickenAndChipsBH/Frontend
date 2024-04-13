@@ -6,8 +6,17 @@ func isAcceptedAnswer(_ userAnswer: String, _ correctAnswer: String) -> Bool {
     let lowercasedUserAnswer = userAnswer.lowercased()
     let lowercasedCorrectAnswer = correctAnswer.lowercased()
 
-    // Check if the user's answer matches the correct answer exactly
-    if lowercasedUserAnswer == lowercasedCorrectAnswer {
+    // Convert digits to words in the user's answer
+    let numberFormatter = NumberFormatter()
+    numberFormatter.numberStyle = .spellOut
+    guard let userNumber = numberFormatter.number(from: lowercasedUserAnswer),
+          let convertedUserAnswer = numberFormatter.string(from: userNumber) else {
+        // Failed to convert user's answer to words, return false
+        return false
+    }
+
+    // Check if the converted user's answer matches the correct answer exactly
+    if convertedUserAnswer == lowercasedCorrectAnswer {
         return true
     }
 
@@ -17,13 +26,13 @@ func isAcceptedAnswer(_ userAnswer: String, _ correctAnswer: String) -> Bool {
     // Check if the user's answer contains any of the words from the correct answer
     for word in correctAnswerWords {
         // If the user's answer contains a word from the correct answer, consider it accepted
-        if lowercasedUserAnswer.contains(word) {
+        if convertedUserAnswer.contains(word) {
             return true
         }
     }
 
     // Calculate Levenshtein distance between user's answer and correct answer
-    let distance = levenshteinDistance(lowercasedUserAnswer, lowercasedCorrectAnswer)
+    let distance = levenshteinDistance(convertedUserAnswer, lowercasedCorrectAnswer)
 
     // If the Levenshtein distance is within a certain threshold, consider it accepted
     let threshold = 2 // Adjust threshold as needed
