@@ -70,6 +70,13 @@ struct VUpgrades: View {
                 CUpgradeable(title: "Burgers", description: "Who doesn’t like a burger?", price: 2000)
                 CUpgradeable(title: "Wine", description: "Rake in the cash by selling “fancy” wine.", price: 4000)
                 Spacer()
+
+                CUpgradeable(title: "Easy Questions", description: "General knowledge most people know.", price: 0)
+                CUpgradeable(title: "Medium Questions", description: "Bring on a challenge to get more customers interested.", price: 1500)
+                CUpgradeable(title: "Hard Questions", description: "Select these if you dare. Quizzers from far and wide will visit, unless all the answers are wrong.", price: 4000)
+                CUpgradeable(title: "Rename Pub", description: "Not happy with your name?", price: 20000)
+                CUpgradeable(title: "Ad Campaign", description: "Buy bots from the dark web to promote your pub.", price: 4000)
+                Spacer()
             }
             .frame(maxWidth: .infinity)
         }
