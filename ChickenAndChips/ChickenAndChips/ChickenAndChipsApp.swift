@@ -12,6 +12,7 @@ struct ChickenAndChipsApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView().environmentObject(HSingleton.shared)
+                .environment(\.colorScheme, .light)
         }
     }
 }

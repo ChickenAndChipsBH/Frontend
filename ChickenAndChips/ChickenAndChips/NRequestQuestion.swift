@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NRequestQuestion {
-    let url = URL(string: "http://localhost:8080/question")!
+    let url = URL(string: "http://172.26.44.137:8080/questioneasy")!
     let delegate: NRequestDelegate
     
     func makeQuestionRequest() {

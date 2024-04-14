@@ -9,10 +9,10 @@ import SwiftUI
 
 struct CRating: View {
     
-    @State var rating: Float
+    var rating: Double
     
     func star(at index: Int) -> some View {
-        let diff = rating - Float(index)
+        let diff = rating - Double(index)
         if diff >= 0 {
             return Image(systemName: "star.fill")
         } else if diff > -1 {
@@ -27,7 +27,7 @@ struct CRating: View {
             ForEach((1...5), id: \.self) {
                 star(at: $0)
             }
-            Text(verbatim: "\(rating)").font(.headline)
+            Text(verbatim: "\(HCurrency.format(Float(rating), decimals: 1))").font(.headline)
         }
     }
 }

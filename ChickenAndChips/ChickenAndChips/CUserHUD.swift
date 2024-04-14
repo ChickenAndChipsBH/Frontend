@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct CUserHUD: View {
+    
+    @EnvironmentObject var singleton: HSingleton
+    
     var body: some View {
         VStack {
-            CRating(rating: 3.5)
+            CRating(rating: singleton.rating)
             HStack {
-                CBalance(title:"Balance", value: 0)
-                CBalance(title:"Revenue", value: 0)
+                CBalance(title:"Balance", value: singleton.money)
+                CBalance(title:"Revenue", value: singleton.idleIncome)
                 CBUpgrade()
             }
         }

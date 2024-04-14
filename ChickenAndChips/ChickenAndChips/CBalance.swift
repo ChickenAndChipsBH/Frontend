@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CBalance: View {
     let title: String
-    @State var value: Float
+    let value: Double
     var body: some View {
         VStack(alignment: .leading) {
             Text(verbatim: title).font(.headline)

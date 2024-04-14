@@ -15,8 +15,10 @@ class HSingleton: ObservableObject, NRequestDelegate {
     
     
     func receiveQandA(question: String, answer: String) {
-        self.question = question
-        self.answer = answer
+        DispatchQueue.main.async {
+            self.question = question
+            self.answer = answer
+        }
     }
     
     func makeNewQuestionRequest() {
@@ -31,14 +33,20 @@ class HSingleton: ObservableObject, NRequestDelegate {
     
     @Published var money = 0.0
     @Published var rating = 1.5
+    
+    @Published var lastCorrect = false
+    @Published var showingResponseCorrectness = false
+    
+    
     var income = 1
     var idleIncome = 0.0
-    /*
+    
     var revenue: Double {
-        idleIncome + (rating * income)
+        idleIncome + (rating * Double(income))
     }
-    var ratingDecay: Float
-    */
+    
+    var ratingDecay = 0.02
+    
     
     func increaseRating(_ amount: Double) {
         // when answering question correct / special event
@@ -46,12 +54,13 @@ class HSingleton: ObservableObject, NRequestDelegate {
         if rating > 5 {
             rating = 5
         }
+        print(rating)
     }
     
     func decreaseRating(_ amount: Double) {
         // when answering question correct / special event
         rating -= amount
-        if rating > 0 {
+        if rating < 0 {
             rating = 0
         }
     }
@@ -69,6 +78,26 @@ class HSingleton: ObservableObject, NRequestDelegate {
             return true
         }
         return false
+    }
+    
+    func updateRating(time: Int) {
+        // time = time (seconds) since last question was answered
+        if (time > -120) {
+            // rating does not decay until 2 mins after answering a question
+            // do nothing
+            return
+        }
+        decreaseRating(ratingDecay)
+    }
+    
+    func updateMoney() {
+        money += revenue
+        
+    }
+    
+    func doAllUpdates(time: Int) {
+        updateRating(time: time)
+        updateMoney()
     }
     
 }

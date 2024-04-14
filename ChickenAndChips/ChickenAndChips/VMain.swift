@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct VMain: View {
+    @EnvironmentObject var singleton: HSingleton
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.red
+                CBuilding()
                 VStack {
                     CUserHUD()
                         .padding()
                     Spacer()
+                    if singleton.showingResponseCorrectness {
+                        CResponseResult()
+                    }
                     CQuestion()
                         .padding()
                 }

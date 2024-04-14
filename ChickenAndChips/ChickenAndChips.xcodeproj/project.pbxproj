@@ -11,6 +11,9 @@
 		7DA1148D2BCB06B700B1ECFE /* NRequestQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA1148C2BCB06B700B1ECFE /* NRequestQuestion.swift */; };
 		7DA1148F2BCB075400B1ECFE /* NRequestDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA1148E2BCB075400B1ECFE /* NRequestDelegate.swift */; };
 		7DA114912BCB0D8800B1ECFE /* HSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA114902BCB0D8800B1ECFE /* HSingleton.swift */; };
+		7DA114932BCB181100B1ECFE /* isAcceptedAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA114922BCB181100B1ECFE /* isAcceptedAnswer.swift */; };
+		7DA114952BCB281B00B1ECFE /* CBuilding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA114942BCB281B00B1ECFE /* CBuilding.swift */; };
+		7DA114972BCB354B00B1ECFE /* CResponseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA114962BCB354B00B1ECFE /* CResponseResult.swift */; };
 		7DA8A3AC2BCAB74C00B404FD /* ChickenAndChipsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A3AB2BCAB74C00B404FD /* ChickenAndChipsApp.swift */; };
 		7DA8A3AE2BCAB74C00B404FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A3AD2BCAB74C00B404FD /* ContentView.swift */; };
 		7DA8A3B02BCAB74E00B404FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DA8A3AF2BCAB74E00B404FD /* Assets.xcassets */; };
@@ -52,6 +55,9 @@
 		7DA1148C2BCB06B700B1ECFE /* NRequestQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NRequestQuestion.swift; sourceTree = "<group>"; };
 		7DA1148E2BCB075400B1ECFE /* NRequestDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NRequestDelegate.swift; sourceTree = "<group>"; };
 		7DA114902BCB0D8800B1ECFE /* HSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSingleton.swift; sourceTree = "<group>"; };
+		7DA114922BCB181100B1ECFE /* isAcceptedAnswer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = isAcceptedAnswer.swift; sourceTree = SOURCE_ROOT; };
+		7DA114942BCB281B00B1ECFE /* CBuilding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBuilding.swift; sourceTree = "<group>"; };
+		7DA114962BCB354B00B1ECFE /* CResponseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CResponseResult.swift; sourceTree = "<group>"; };
 		7DA8A3A82BCAB74C00B404FD /* ChickenAndChips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChickenAndChips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA8A3AB2BCAB74C00B404FD /* ChickenAndChipsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickenAndChipsApp.swift; sourceTree = "<group>"; };
 		7DA8A3AD2BCAB74C00B404FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -134,10 +140,13 @@
 				7DA8A3DB2BCAC29400B404FD /* CBalance.swift */,
 				7DA8A3DF2BCAC8A800B404FD /* CUpgradeable.swift */,
 				7DA8A3E52BCACE7E00B404FD /* CBUpgrade.swift */,
+				7DA114942BCB281B00B1ECFE /* CBuilding.swift */,
 				7DA8A3E32BCACB3B00B404FD /* VUpgrades.swift */,
 				7DA8A3E72BCAD3C100B404FD /* SJuicyButtonStyle.swift */,
 				7DA1148A2BCAEF2000B1ECFE /* SSolidButtonStyle.swift */,
 				7DA8A3D72BCABD2700B404FD /* VMain.swift */,
+				7DA114962BCB354B00B1ECFE /* CResponseResult.swift */,
+				7DA114922BCB181100B1ECFE /* isAcceptedAnswer.swift */,
 				7DA8A3AF2BCAB74E00B404FD /* Assets.xcassets */,
 				7DA8A3B12BCAB74E00B404FD /* Preview Content */,
 			);
@@ -308,12 +317,15 @@
 				7DA114912BCB0D8800B1ECFE /* HSingleton.swift in Sources */,
 				7DA1148F2BCB075400B1ECFE /* NRequestDelegate.swift in Sources */,
 				7DA1148B2BCAEF2000B1ECFE /* SSolidButtonStyle.swift in Sources */,
+				7DA114952BCB281B00B1ECFE /* CBuilding.swift in Sources */,
 				7DA8A3DC2BCAC29400B404FD /* CBalance.swift in Sources */,
 				7DA8A3AC2BCAB74C00B404FD /* ChickenAndChipsApp.swift in Sources */,
 				7DA8A3E02BCAC8A800B404FD /* CUpgradeable.swift in Sources */,
 				7DA8A3DE2BCAC7FB00B404FD /* CUserHUD.swift in Sources */,
 				7DA8A3D62BCABB3100B404FD /* CQuestion.swift in Sources */,
 				7DA8A3E82BCAD3C100B404FD /* SJuicyButtonStyle.swift in Sources */,
+				7DA114972BCB354B00B1ECFE /* CResponseResult.swift in Sources */,
+				7DA114932BCB181100B1ECFE /* isAcceptedAnswer.swift in Sources */,
 				7DA8A3DA2BCABE7300B404FD /* CRating.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,8 +490,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ChickenAndChips/Preview Content\"";
+				DEVELOPMENT_TEAM = NU28F9M69W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Trivia Tavern";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -490,6 +504,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = bh24.ChickenAndChips;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -506,8 +521,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ChickenAndChips/Preview Content\"";
+				DEVELOPMENT_TEAM = NU28F9M69W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Trivia Tavern";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -518,6 +535,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = bh24.ChickenAndChips;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
