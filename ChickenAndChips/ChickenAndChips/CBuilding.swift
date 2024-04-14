@@ -33,6 +33,12 @@ struct CBuilding: View {
                 Image("plant")
                     .resizeable()
                     .aspectRatio(contentMode: .fit)
+                // if bigger pub then add 2 plants
+                if singleton.pubLevel > 1 {
+                    Image("plant")
+                        .resizeable()
+                        .aspectRatio(contentMode: .fit)
+                }
             }
             if singleton.upgradesDone.contains("Outdoor Seating") {
                 Image("chairs")
