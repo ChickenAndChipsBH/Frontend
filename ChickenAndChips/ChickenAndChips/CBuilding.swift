@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct CBuilding: View {
-    
+
     @EnvironmentObject var singleton: HSingleton
     @State var pubImage = "pub1"
-    
+
     var body: some View {
         ZStack {
             Image(singleton.pubImage)
@@ -26,7 +26,7 @@ struct CBuilding: View {
                 // if bigger pub then add 2 plants
                 if singleton.pubLevel > 1 {
                     Image("plant")
-                        
+
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .offset(x: -300, y: -150)
