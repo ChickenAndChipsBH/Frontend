@@ -12,7 +12,34 @@ class HSingleton: ObservableObject, NRequestDelegate {
     
     static let shared = HSingleton()
     
+    import Dispatch
+
+private var timer: DispatchSourceTimer?
+
+    func startTimer() {
+        let queue = DispatchQueue(label: "com.example.timer")
+        timer = DispatchSource.makeTimerSource(queue: queue)
+        timer!.schedule(deadline: .now(), repeating: .seconds(1))
+        timer!.setEventHandler {
+            //DO LOOP TASKS HERE
     
+            DispatchQueue.main.async {
+                // update your model objects and/or UI here
+            }
+        }
+        timer!.resume()
+    }
+    
+    func stopTimer() {
+        timer?.cancel()
+        timer = nil
+    }
+    
+    // Call startTimer to begin the timer
+    startTimer()
+    
+    // Dispatch the main thread to prevent the script from terminating immediately
+    dispatchMain()
     
     func receiveQandA(question: String, answer: String) {
         self.question = question
