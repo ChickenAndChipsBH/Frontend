@@ -12,7 +12,9 @@ class HSingleton: ObservableObject, NRequestDelegate {
     
     static let shared = HSingleton()
     
-
+    
+    var upgradesDone: [String] = []
+    
     private var timer: DispatchSourceTimer?
 
     func startTimer() {
@@ -67,6 +69,7 @@ class HSingleton: ObservableObject, NRequestDelegate {
     @Published var rating = 1.5
     
     @Published var timeElapsed = -1
+    @Published var timeElapsed2 = -1
     
     @Published var lastCorrect = false
     @Published var showingResponseCorrectness = false
@@ -132,12 +135,13 @@ class HSingleton: ObservableObject, NRequestDelegate {
     func doAllUpdates() {
         
         timeElapsed -= 1
+        timeElapsed2 -= 1
         
         withAnimation {
-            if timeElapsed == 0 {
+            if timeElapsed2 == 0 {
                 self.makeNewQuestionRequest()
             }
-            if timeElapsed < 1 {
+            if timeElapsed2 < 1 {
                 self.showingResponseCorrectness = false
             }
         }

@@ -14,7 +14,9 @@ struct VUpgrades: View {
         VStack {
             HStack {
                 Button {
-                    page = 0
+                    withAnimation {
+                        page = 0
+                    }
                 } label: {
                     Text(verbatim: "Building")
                 }

@@ -39,11 +39,13 @@ struct CQuestion: View {
                         singleton.increaseMoney(Double(singleton.income * 100))
                         singleton.lastCorrect = true
                         
-                        singleton.timeElapsed = 3
+                        singleton.timeElapsed = 0
                     } else {
                         singleton.lastCorrect = false
                         singleton.decreaseRating(0.2)
                     }
+                    
+                    singleton.timeElapsed2 = 3
                     
                     withAnimation {
                         singleton.showingResponseCorrectness = true
