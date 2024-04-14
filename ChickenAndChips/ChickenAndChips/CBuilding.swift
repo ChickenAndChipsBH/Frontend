@@ -8,10 +8,26 @@
 import SwiftUI
 
 struct CBuilding: View {
+    
+    @EnvironmentObject var singleton: HSingleton
+
     var body: some View {
-        Image("Pub1")
-            .resizable()
-            .aspectRatio(contentMode: .fit)
+        ZStack {
+            var pubImage;
+            switch singleton.pubLevel {
+                case 1:
+                    pubImage = "pub1"
+                case 2:
+                    pubImage = "pub2"
+                case 3:
+                    pubImage = "pub3"
+                default:
+                    // error
+                    pubImage = "pub33"
+            }
+            Image(pubImage)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
     }
 }
 
