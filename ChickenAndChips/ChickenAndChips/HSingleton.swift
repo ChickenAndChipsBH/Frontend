@@ -83,11 +83,13 @@ class HSingleton: ObservableObject, NRequestDelegate {
     }
     
     var ratingDecay = 0.02
+
+    var ratingPercentageIncrease: Double = 0.0
     
     
     func increaseRating(_ amount: Double) {
         // when answering question correct / special event
-        rating += amount
+        rating += amount * (1 + ratingPercentageIncrease)
         if rating > 5 {
             rating = 5
         }
