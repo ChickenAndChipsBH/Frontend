@@ -13,6 +13,7 @@ struct ChickenAndChipsApp: App {
         WindowGroup {
             ContentView().environmentObject(HSingleton.shared)
                 .environment(\.colorScheme, .light)
+                
         }
     }
 }

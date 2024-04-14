@@ -11,7 +11,11 @@ struct CQuestion: View {
     
     @State var qAnswer = ""
     
+    // @State private var selection = "Easy"
+    let difficulties = ["Easy", "Medium", "Hard"]
+    
     @EnvironmentObject var singleton: HSingleton
+    
     
     // @State var timeElapsed = -1
     
@@ -27,6 +31,7 @@ struct CQuestion: View {
             .frame(maxWidth: .infinity)
             .padding()
             .cornerRadius(12)
+            .background(.ultraThinMaterial)
             .border(.black)
             HStack {
                 TextField("Enter answer...", text: $qAnswer)
@@ -62,6 +67,12 @@ struct CQuestion: View {
             .padding()
             .cornerRadius(12)
             .border(.black)
+            Picker("Select difficulty", selection: $singleton.difficulty) {
+                ForEach(difficulties, id: \.self) {
+                    Text($0)
+                }
+            }
+                .pickerStyle(.menu)
         }
         .onAppear {
             singleton.makeNewQuestionRequest()

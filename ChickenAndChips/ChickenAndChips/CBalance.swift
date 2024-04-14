@@ -18,6 +18,7 @@ struct CBalance: View {
         .frame(maxWidth: .infinity)
         .padding()
         .cornerRadius(12)
+        .background(.ultraThinMaterial)
         .border(.black)
     }
 }

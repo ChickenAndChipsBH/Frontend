@@ -60,7 +60,9 @@ class HSingleton: ObservableObject, NRequestDelegate {
         questionRequest.makeQuestionRequest()
     }
     
-    var pubLevel = 1
+    @Published var pubLevel = 1
+    
+    @Published var showingSheet = true
     
     @Published var question: String = ""
     var answer  = ""
@@ -74,6 +76,9 @@ class HSingleton: ObservableObject, NRequestDelegate {
     @Published var lastCorrect = false
     @Published var showingResponseCorrectness = false
     
+    @Published var pubImage = "pub1"
+    
+    @Published var difficulty = "Easy"
     
     var income = 1
     var idleIncome = 0.0
@@ -134,6 +139,29 @@ class HSingleton: ObservableObject, NRequestDelegate {
         
     }
     
+    func updatePubAppearance() {
+        switch pubLevel { // check what pub level, then check the popularity to choose appropriate texture
+        case 1:
+            if rating < 1.0 { pubImage = "pub1" }
+            else if rating < 2.5 { pubImage = "pub11" }
+            else if rating < 4.0 { pubImage = "pub12" }
+            else { pubImage = "pub13" }
+        case 2:
+            if rating < 1.0 { pubImage = "pub2" }
+            else if rating < 2.5 { pubImage = "pub21" }
+            else if rating < 4.0 { pubImage = "pub22" }
+            else { pubImage = "pub23" }
+        case 3:
+            if rating < 1.0 { pubImage = "pub3" }
+            else if rating < 2.5 { pubImage = "pub31" }
+            else if rating < 4.0 { pubImage = "pub32" }
+            else { pubImage = "pub33" }
+        default:
+            // error
+            pubImage = "pub33"
+        }
+    }
+    
     func doAllUpdates() {
         
         timeElapsed -= 1
@@ -149,6 +177,7 @@ class HSingleton: ObservableObject, NRequestDelegate {
         }
         updateRating(time: timeElapsed)
         updateMoney()
+        updatePubAppearance()
     }
     
 }

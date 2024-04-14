@@ -11,7 +11,7 @@ struct VUBuilding: View {
     var body: some View {
         LazyVStack {
             // Building Upgrades
-            CUpgradeable(title: "Relocate", description: "Upgrade your pub to a more wealthy location. Resets all upgrades. +£100 income", price: 200000, incomeIncrease: 100)
+            CUpgradeable(title: "Relocate", description: "Upgrade your pub to a more wealthy location. Resets all upgrades. +£100 income", price: 10000, isPubUpgrade: true)
             CUpgradeable(title: "Outdoor Seating", description: "Increase capacity of the pub with outdoor seating... when its sunny. +10% rating boost", price: 1500, ratingPercentageIncrease: 10)
             CUpgradeable(title: "Neon Sign", description: "Nothing catches the attention of customers (and flies) than a bright neon sign. +15% rating boost", price: 4000, ratingPercentageIncrease: 15)
             CUpgradeable(title: "Plants", description: "Bring some life into the pub with some greenery. -5% rating decay", price: 500, ratingDecayDecrease: 5)

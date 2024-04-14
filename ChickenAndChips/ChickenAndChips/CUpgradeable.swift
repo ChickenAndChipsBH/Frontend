@@ -37,7 +37,30 @@ struct CUpgradeable: View {
     }
     
     func processPubUpgrade() {
+        
+        print("Buying upgrade")
+        guard singleton.decreaseMoney(Double(price)) else {
+            print("Insufficient funds, transaction failed")
+            return
+        }
+        
+        singleton.pubLevel += 1
+        print(singleton.pubLevel)
+        singleton.updatePubAppearance()
+        singleton.upgradesDone = []
+        singleton.rating = 1.5
+        singleton.idleIncome = 0
+        
+        if singleton.pubLevel == 1 {
+            singleton.income = 20
+        } else if singleton.pubLevel == 2 {
+            singleton.income = 100
+        }
+        
+        singleton.showingSheet = true
         upgradePurchased = checkPurchased()
+        
+        
     }
     
     func processUpgrade() {
@@ -45,6 +68,7 @@ struct CUpgradeable: View {
             return
         }
         guard !isPubUpgrade else {
+            print("Processing pub upgrade")
             processPubUpgrade()
             return
         }

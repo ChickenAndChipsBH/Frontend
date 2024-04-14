@@ -24,7 +24,14 @@ struct VMain: View {
                         .padding()
                 }
             }
+            .background(Color(red: 235/255, green: 219/255, blue: 182/255))
         }
+        .sheet(isPresented: $singleton.showingSheet, content: {
+            VSheet()
+                .padding()
+        })
+        
+        .preferredColorScheme(.light)
     }
 }
 

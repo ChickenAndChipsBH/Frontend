@@ -14,7 +14,7 @@ struct CResponseResult: View {
     var body: some View {
         HStack {
             if singleton.lastCorrect {
-                Image("ThumbsUp").resizable().aspectRatio(contentMode: .fit)
+                Image("thumb up").resizable().aspectRatio(contentMode: .fit)
                 Spacer()
                 Text("That's correct!")
                     .font(.title)

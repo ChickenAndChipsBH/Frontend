@@ -14,6 +14,7 @@ struct CBUpgrade: View {
         } label: {
             Image(systemName: "arrowshape.up.fill")
         }
+        .buttonStyle(SSolidButtonStyle(color: .green, excludeFrame: true))
     }
 }
 

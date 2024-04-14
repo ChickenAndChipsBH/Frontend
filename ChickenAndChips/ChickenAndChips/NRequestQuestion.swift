@@ -8,10 +8,14 @@
 import SwiftUI
 
 struct NRequestQuestion {
-    let url = URL(string: "http://172.26.44.137:8080/questioneasy")!
+    
+    
+    
     let delegate: NRequestDelegate
     
     func makeQuestionRequest() {
+        
+        let url = URL(string: "http://172.26.44.137:8080/question\(HSingleton.shared.difficulty.lowercased())")!
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data, error == nil else {
                 print("An error has occured in the network request.")
