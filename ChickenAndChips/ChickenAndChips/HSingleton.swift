@@ -65,7 +65,7 @@ class HSingleton: ObservableObject, NRequestDelegate {
     @Published var question: String = ""
     var answer  = ""
     
-    @Published var money = 0.0
+    @Published var money = 10000.0
     @Published var rating = 1.5
     
     @Published var timeElapsed = -1

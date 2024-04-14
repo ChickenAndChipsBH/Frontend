@@ -22,19 +22,25 @@ struct VUpgrades: View {
                 }
                 .padding(.bottom, 10)
                 Button {
-                    page = 1
-                } label: {
-                    Text(verbatim: "Products")
-                }
-                .padding(.bottom, 10)
-                Button {
-                    page = 2
+                    withAnimation {
+                        page = 1
+                    }
                 } label: {
                     Text(verbatim: "Staff")
                 }
                 .padding(.bottom, 10)
                 Button {
-                    page = 3
+                    withAnimation {
+                        page = 2
+                    }
+                } label: {
+                    Text(verbatim: "Products")
+                }
+                .padding(.bottom, 10)
+                Button {
+                    withAnimation {
+                        page = 3
+                    }
                 } label: {
                     Text(verbatim: "Fun")
                 }

@@ -16,7 +16,7 @@ struct CUserHUD: View {
             CRating(rating: singleton.rating)
             HStack {
                 CBalance(title:"Balance", value: singleton.money)
-                CBalance(title:"Revenue", value: singleton.idleIncome)
+                CBalance(title:"Revenue", value: singleton.revenue)
                 CBUpgrade()
             }
         }
