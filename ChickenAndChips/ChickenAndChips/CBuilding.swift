@@ -14,13 +14,22 @@ struct CBuilding: View {
     var body: some View {
         ZStack {
             var pubImage;
-            switch singleton.pubLevel {
+            switch singleton.pubLevel { // check what pub level, then check the popularity to choose appropriate texture
                 case 1:
-                    pubImage = "pub1"
+                    if singleton.rating < 1.0 { pubImage = "pub1" }
+                    else if singleton.rating < 2.5 { pubImage = "pub11" }
+                    else if singleton.rating < 4.0 { pubImage = "pub12" }
+                    else { pubImage = "pub13" }
                 case 2:
-                    pubImage = "pub2"
+                    if singleton.rating < 1.0 { pubImage = "pub2" }
+                    else if singleton.rating < 2.5 { pubImage = "pub21" }
+                    else if singleton.rating < 4.0 { pubImage = "pub22" }
+                    else { pubImage = "pub23" }
                 case 3:
-                    pubImage = "pub3"
+                    if singleton.rating < 1.0 { pubImage = "pub3" }
+                    else if singleton.rating < 2.5 { pubImage = "pub31" }
+                    else if singleton.rating < 4.0 { pubImage = "pub32" }
+                    else { pubImage = "pub33" }
                 default:
                     // error
                     pubImage = "pub33"
