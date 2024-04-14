@@ -12,11 +12,11 @@ struct CUpgradeable: View {
     let description: String
     let price: Float
     var body: some View {
-        HStack() {
+        VStack() {
             VStack(alignment: .leading) {
-                Text(verbatim: title).font(.title)
+                Text(verbatim: title).font(.title).multilineTextAlignment(.leading)
                 Text(verbatim: description)
-                    .font(.headline)
+                    .font(.headline).multilineTextAlignment(.leading)
             }
             Spacer()
             Button {

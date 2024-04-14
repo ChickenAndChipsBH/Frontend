@@ -14,10 +14,11 @@ struct SJuicyButtonStyle: ButtonStyle {
             .font(.headline)
             .shadow(color: .black, radius: 1)
             //.padding()
+            .padding([.top, .bottom], 5)
             .background(Image("wood box").resizable().aspectRatio(contentMode: .fill))
             //.background(Color.red)
             .foregroundStyle(.white)
-            //.padding()
+            .padding([.top, .bottom], 5)
             .clipShape(Capsule())
     }
 }

@@ -13,7 +13,7 @@ struct CQuestion: View {
     
     @EnvironmentObject var singleton: HSingleton
     
-    @State var timeElapsed = -1
+    // @State var timeElapsed = -1
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
@@ -38,6 +38,8 @@ struct CQuestion: View {
                         singleton.increaseRating(0.3)
                         singleton.increaseMoney(Double(singleton.income * 100))
                         singleton.lastCorrect = true
+                        
+                        singleton.timeElapsed = 3
                     } else {
                         singleton.lastCorrect = false
                         singleton.decreaseRating(0.2)
@@ -46,7 +48,7 @@ struct CQuestion: View {
                     withAnimation {
                         singleton.showingResponseCorrectness = true
                     }
-                    timeElapsed = 3
+                    
                     
                     
                     qAnswer = ""
@@ -63,14 +65,10 @@ struct CQuestion: View {
             singleton.makeNewQuestionRequest()
         }
         .onReceive(timer) { _ in
-            timeElapsed -= 1
-            if timeElapsed == 0 {
-                singleton.makeNewQuestionRequest()
-            }
-            if timeElapsed < 1 {
-                singleton.showingResponseCorrectness = false
-            }
-            singleton.doAllUpdates(time: timeElapsed)
+            // singleton.timeElapsed -= 1
+            print(singleton.timeElapsed)
+            
+            // singleton.doAllUpdates(time: timeElapsed)
         }
     }
 }

@@ -12,9 +12,8 @@ class HSingleton: ObservableObject, NRequestDelegate {
     
     static let shared = HSingleton()
     
-    import Dispatch
 
-private var timer: DispatchSourceTimer?
+    private var timer: DispatchSourceTimer?
 
     func startTimer() {
         let queue = DispatchQueue(label: "com.example.timer")
@@ -26,6 +25,10 @@ private var timer: DispatchSourceTimer?
             //DispatchQueue.main.async {
                 // update your model objects and/or UI here NOT SURE IF NEEDED
             //}
+            
+            DispatchQueue.main.async {
+                self.doAllUpdates()
+            }
         }
         timer!.resume()
     }
@@ -35,11 +38,13 @@ private var timer: DispatchSourceTimer?
         timer = nil
     }
     
-    // Call startTimer to begin the timer
-    startTimer()
-    
-    // Dispatch the main thread to prevent the script from terminating immediately
-    dispatchMain()
+    init() {
+        // Call startTimer to begin the timer
+        startTimer()
+        
+        // Dispatch the main thread to prevent the script from terminating immediately
+        // dispatchMain()
+    }
     
     func receiveQandA(question: String, answer: String) {
         DispatchQueue.main.async {
@@ -60,6 +65,8 @@ private var timer: DispatchSourceTimer?
     
     @Published var money = 0.0
     @Published var rating = 1.5
+    
+    @Published var timeElapsed = -1
     
     @Published var lastCorrect = false
     @Published var showingResponseCorrectness = false
@@ -122,8 +129,19 @@ private var timer: DispatchSourceTimer?
         
     }
     
-    func doAllUpdates(time: Int) {
-        updateRating(time: time)
+    func doAllUpdates() {
+        
+        timeElapsed -= 1
+        
+        withAnimation {
+            if timeElapsed == 0 {
+                self.makeNewQuestionRequest()
+            }
+            if timeElapsed < 1 {
+                self.showingResponseCorrectness = false
+            }
+        }
+        updateRating(time: timeElapsed)
         updateMoney()
     }
     
