@@ -23,9 +23,9 @@ private var timer: DispatchSourceTimer?
         timer!.setEventHandler {
             //DO LOOP TASKS HERE
     
-            DispatchQueue.main.async {
-                // update your model objects and/or UI here
-            }
+            //DispatchQueue.main.async {
+                // update your model objects and/or UI here NOT SURE IF NEEDED
+            //}
         }
         timer!.resume()
     }
