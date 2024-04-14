@@ -54,6 +54,9 @@ struct CBuilding: View {
                     .resizeable()
                     .aspectRatio(contentMode: .fit)
             }
+            if singleton.upgradesDone.contains("Quizmaster") {
+                Image("quizmaster2")
+            }
     }
 }
 
