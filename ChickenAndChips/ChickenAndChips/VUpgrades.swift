@@ -8,29 +8,31 @@
 import SwiftUI
 
 struct VUpgrades: View {
+    
+    @State var page = 0
     var body: some View {
         VStack {
             HStack {
                 Button {
-                    
+                    page = 0
                 } label: {
                     Text(verbatim: "Building")
                 }
                 .padding(.bottom, 10)
                 Button {
-                    
+                    page = 1
                 } label: {
                     Text(verbatim: "Products")
                 }
                 .padding(.bottom, 10)
                 Button {
-                    
+                    page = 2
                 } label: {
                     Text(verbatim: "Staff")
                 }
                 .padding(.bottom, 10)
                 Button {
-                    
+                    page = 3
                 } label: {
                     Text(verbatim: "Fun")
                 }
@@ -42,6 +44,19 @@ struct VUpgrades: View {
             .background(Image("brick").resizable(resizingMode: .tile))
             ScrollView {
                 LazyVStack {
+                    switch page {
+                    case 0:
+                        VUBuilding()
+                    case 1:
+                        VUStaff()
+                    case 2:
+                        VUProducts()
+                    case 3:
+                        VUFun()
+                    default:
+                        VUBuilding()
+                    }
+                    /*
                     // Building Upgrades
                     CUpgradeable(title: "Relocate", description: "Upgrade your pub to a more wealthy location. Resets all upgrades. +£100/sec", price: 200000)
                     CUpgradeable(title: "Outdoor Seating", description: "Increase capacity of the pub with outdoor seating... when its sunny. +10% rating boost", price: 1500)
@@ -49,7 +64,7 @@ struct VUpgrades: View {
                     CUpgradeable(title: "Plants", description: "Bring some life into the pub with some greenery. -5% rating decay", price: 500)
                     CUpgradeable(title: "Micro Brewery", description: "Keep the pub hip and trendy by brewing your own craft IPAs. Don't worry, you don't need to know what hops are for the quiz questions. +150/sec", price: 5000)
                     
-                    /*
+                    
                     Spacer()
                     // Staff Upgrades
                     CUpgradeable(title: "Quiz Master", description: "Hire someone to run the pub quiz while you’re away. +£10/sec", price: 2500)

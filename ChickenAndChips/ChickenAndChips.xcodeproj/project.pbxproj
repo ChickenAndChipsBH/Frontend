@@ -14,6 +14,10 @@
 		7DA114932BCB181100B1ECFE /* isAcceptedAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA114922BCB181100B1ECFE /* isAcceptedAnswer.swift */; };
 		7DA114952BCB281B00B1ECFE /* CBuilding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA114942BCB281B00B1ECFE /* CBuilding.swift */; };
 		7DA114972BCB354B00B1ECFE /* CResponseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA114962BCB354B00B1ECFE /* CResponseResult.swift */; };
+		7DA114992BCBC27F00B1ECFE /* VUBuilding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA114982BCBC27F00B1ECFE /* VUBuilding.swift */; };
+		7DA1149B2BCBC29E00B1ECFE /* VUStaff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA1149A2BCBC29E00B1ECFE /* VUStaff.swift */; };
+		7DA1149D2BCBC2A900B1ECFE /* VUProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA1149C2BCBC2A900B1ECFE /* VUProducts.swift */; };
+		7DA1149F2BCBC2B200B1ECFE /* VUFun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA1149E2BCBC2B200B1ECFE /* VUFun.swift */; };
 		7DA8A3AC2BCAB74C00B404FD /* ChickenAndChipsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A3AB2BCAB74C00B404FD /* ChickenAndChipsApp.swift */; };
 		7DA8A3AE2BCAB74C00B404FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A3AD2BCAB74C00B404FD /* ContentView.swift */; };
 		7DA8A3B02BCAB74E00B404FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DA8A3AF2BCAB74E00B404FD /* Assets.xcassets */; };
@@ -58,6 +62,10 @@
 		7DA114922BCB181100B1ECFE /* isAcceptedAnswer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = isAcceptedAnswer.swift; sourceTree = SOURCE_ROOT; };
 		7DA114942BCB281B00B1ECFE /* CBuilding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBuilding.swift; sourceTree = "<group>"; };
 		7DA114962BCB354B00B1ECFE /* CResponseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CResponseResult.swift; sourceTree = "<group>"; };
+		7DA114982BCBC27F00B1ECFE /* VUBuilding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VUBuilding.swift; sourceTree = "<group>"; };
+		7DA1149A2BCBC29E00B1ECFE /* VUStaff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VUStaff.swift; sourceTree = "<group>"; };
+		7DA1149C2BCBC2A900B1ECFE /* VUProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VUProducts.swift; sourceTree = "<group>"; };
+		7DA1149E2BCBC2B200B1ECFE /* VUFun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VUFun.swift; sourceTree = "<group>"; };
 		7DA8A3A82BCAB74C00B404FD /* ChickenAndChips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChickenAndChips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA8A3AB2BCAB74C00B404FD /* ChickenAndChipsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickenAndChipsApp.swift; sourceTree = "<group>"; };
 		7DA8A3AD2BCAB74C00B404FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -142,6 +150,10 @@
 				7DA8A3E52BCACE7E00B404FD /* CBUpgrade.swift */,
 				7DA114942BCB281B00B1ECFE /* CBuilding.swift */,
 				7DA8A3E32BCACB3B00B404FD /* VUpgrades.swift */,
+				7DA114982BCBC27F00B1ECFE /* VUBuilding.swift */,
+				7DA1149A2BCBC29E00B1ECFE /* VUStaff.swift */,
+				7DA1149C2BCBC2A900B1ECFE /* VUProducts.swift */,
+				7DA1149E2BCBC2B200B1ECFE /* VUFun.swift */,
 				7DA8A3E72BCAD3C100B404FD /* SJuicyButtonStyle.swift */,
 				7DA1148A2BCAEF2000B1ECFE /* SSolidButtonStyle.swift */,
 				7DA8A3D72BCABD2700B404FD /* VMain.swift */,
@@ -308,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DA114992BCBC27F00B1ECFE /* VUBuilding.swift in Sources */,
 				7DA1148D2BCB06B700B1ECFE /* NRequestQuestion.swift in Sources */,
 				7DA8A3AE2BCAB74C00B404FD /* ContentView.swift in Sources */,
 				7DA8A3D82BCABD2700B404FD /* VMain.swift in Sources */,
@@ -315,10 +328,12 @@
 				7DA8A3E42BCACB3B00B404FD /* VUpgrades.swift in Sources */,
 				7DA8A3E62BCACE7E00B404FD /* CBUpgrade.swift in Sources */,
 				7DA114912BCB0D8800B1ECFE /* HSingleton.swift in Sources */,
+				7DA1149F2BCBC2B200B1ECFE /* VUFun.swift in Sources */,
 				7DA1148F2BCB075400B1ECFE /* NRequestDelegate.swift in Sources */,
 				7DA1148B2BCAEF2000B1ECFE /* SSolidButtonStyle.swift in Sources */,
 				7DA114952BCB281B00B1ECFE /* CBuilding.swift in Sources */,
 				7DA8A3DC2BCAC29400B404FD /* CBalance.swift in Sources */,
+				7DA1149D2BCBC2A900B1ECFE /* VUProducts.swift in Sources */,
 				7DA8A3AC2BCAB74C00B404FD /* ChickenAndChipsApp.swift in Sources */,
 				7DA8A3E02BCAC8A800B404FD /* CUpgradeable.swift in Sources */,
 				7DA8A3DE2BCAC7FB00B404FD /* CUserHUD.swift in Sources */,
@@ -326,6 +341,7 @@
 				7DA8A3E82BCAD3C100B404FD /* SJuicyButtonStyle.swift in Sources */,
 				7DA114972BCB354B00B1ECFE /* CResponseResult.swift in Sources */,
 				7DA114932BCB181100B1ECFE /* isAcceptedAnswer.swift in Sources */,
+				7DA1149B2BCBC29E00B1ECFE /* VUStaff.swift in Sources */,
 				7DA8A3DA2BCABE7300B404FD /* CRating.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

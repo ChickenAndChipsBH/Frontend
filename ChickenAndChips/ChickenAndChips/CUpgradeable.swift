@@ -11,6 +11,14 @@ struct CUpgradeable: View {
     let title: String
     let description: String
     let price: Float
+    
+    
+    // bonus information
+    var idleIncomeIncrease: Int? = nil
+    var incomeIncrease: Int? = nil
+    var ratingPercentageIncrease: Int? = nil
+    var ratingDecayDecrease: Int? = nil
+    
     var body: some View {
         VStack() {
             VStack(alignment: .leading) {
