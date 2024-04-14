@@ -28,6 +28,17 @@ struct CBuilding: View {
             Image(pubImage)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+            var plants = false
+            if singleton.upgradesDone.contains("Plants") {
+                Image("plant")
+                    .resizeable()
+                    .aspectRatio(contentMode: .fit)
+            }
+            if singleton.upgradesDone.contains("Outdoor Seating") {
+                Image("chairs")
+                    .resizeable()
+                    .aspectRatio(contentMode: .fit)
+            }
     }
 }
 
